@@ -1,0 +1,74 @@
+/* Basic layout */
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+#app {
+  text-align: center;
+}
+
+/* Card around the display + buttons */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 16px;
+  margin: 8px;
+  border-radius: 8px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Floor display */
+#current_floor {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Elevator shaft */
+.shaft {
+  position: relative;
+  width: 120px;
+  height: 380px;     /* adjusts total floors height */
+  border: 3px solid #333;
+  background: linear-gradient(#e9e9e9, #fefefe);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Elevator cab (moving box) */
+#elevator_box {
+  position: absolute;
+  bottom: 0;           /* starts on floor 0 */
+  width: 90px;
+  height: 60px;
+  background-color: #ffcc66;
+  border: 2px solid #b8860b;
+  border-radius: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease; /* smooth movement */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
